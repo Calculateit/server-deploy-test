@@ -10,7 +10,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 sudo apt-get install -y docker-ce bash-completion
 sudo usermod -aG docker ${USER}
-echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
+echo "TeChradar!1" | docker login -u "techradarapi" --password-stdin
 
 # Установка Docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
