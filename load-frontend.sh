@@ -22,8 +22,8 @@ folders=( \
 for folder in ${folders[*]}
 do
     echo "update " $folder
-    cd $folder && git fetch
-    cd $folder && git reset --hard origin/$branch
+    cd $folder && git clone git@github.com:hhru-school/techradar.git
+    git checkout $branch
     echo "building frontend "
     cd $folder && npm i
     cd $folder && npm build react-app-rewired -y
