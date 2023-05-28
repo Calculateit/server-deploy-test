@@ -17,10 +17,10 @@ echo "Working branch " $branch
 
 echo "update " $FRONTEND_SRC_DIR
 cd $FRONTEND_SRC_DIR && git clone git@github.com:hhru-school/techradar.git
-git checkout $FRONTEND_SRC_DIR
+cd $FRONTEND_SRC_DIR/techradar && git checkout $FRONTEND_SRC_DIR
 echo "building frontend "
-cd $FRONTEND_SRC_DIR && npm i
-cd $FRONTEND_SRC_DIR && npm build react-app-rewired -y
+cd $FRONTEND_SRC_DIR/techradar && npm i
+cd $FRONTEND_SRC_DIR/techradar && npm build react-app-rewired -y
 
 cd $prodDir && docker-compose up -d --build
 
