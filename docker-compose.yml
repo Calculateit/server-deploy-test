@@ -31,11 +31,10 @@ services:
       - reverse-proxy
   
   client:
-    build:
-      context: ${FRONTEND_SRC_DIR}
-      dockerfile: Dockerfile
-    expose:
-      - 3000
+    container_name: techradar-client
+    image: techradarapi/techradar-api:TESTING
+    ports:
+      - 3000:80
     environment:
       - VIRTUAL_HOST=${COMMON_DOMAIN}
       - LETSENCRYPT_HOST=${COMMON_DOMAIN}
