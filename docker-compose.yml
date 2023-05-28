@@ -44,7 +44,9 @@ services:
 
 networks:
   reverse-proxy:
-    external:
-      name: reverse-proxy
+    external: true
   internal:
     driver: bridge
+volumes:
+  postgres:
+    external: true
